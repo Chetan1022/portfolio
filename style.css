@@ -29,6 +29,7 @@
     text-transform: uppercase;
     font-size: 1rem;
     color: white;
+    position: relative;
 }
 .left-container,.right-container{
     height: 100vh;
@@ -81,9 +82,9 @@
     font-size: 4rem;
 }
 .content .details{
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color: white;
-    max-width: 38rem;
+    max-width: 50rem;
     margin: 1.1rem 0 3rem 0;
     line-height: 1.8rem;
 }
@@ -129,6 +130,7 @@ button:nth-child(2):hover{
     background-size: 100%;
     background-repeat: no-repeat;
     width: 30rem;
+    border: 0.3rem solid white;
     box-shadow: 0 0 1rem #fff,
     inset 0 0 1rem #fff, 
     0 0 2rem #3877ff, 
@@ -136,5 +138,20 @@ button:nth-child(2):hover{
     0 0 4rem #3877ff,
     inset 0 0 4rem #3877ff;
 }
-
+.navlist li a:after{
+    content: "";
+    position: absolute;
+    background: white;
+    width: 100%;
+    height: 0.1rem;
+    left: 0;
+    bottom: -5px;
+    transform: scale(0);
+    transform-origin: bottom right;
+    transition: transform 0.5s;
+}
+.navlist li a:hover::after{
+    transform: scale(1);
+    transform-origin: bottom left;
+}
 
